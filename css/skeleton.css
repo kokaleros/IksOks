@@ -416,3 +416,70 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+
+/* IkSOks Game*/
+#IksOksContainer {
+  position: relative;
+  display: block;
+  border:1px solid rgba(255, 0, 0,0.2);
+  width: 430px;
+  height: 430px;
+}
+
+#IksOksGame {
+  position: relative;
+}
+
+#IksOksGame .field{
+  width: 30.8%;
+  height: 125px;
+  background: rgb(255, 0, 0);
+  float: left;
+  padding: 1% 1%;
+
+  color: #ffffff;
+  text-align: center;
+
+  -webkit-transition:all 0.2s ease-In-Out;
+  -moz-transition:all 0.2s ease-In-Out;
+  -ms-transition:all 0.2s ease-In-Out;
+  -o-transition:all 0.2s ease-In-Out;
+  transition:all 0.2s ease-In-Out;
+
+  cursor:pointer;
+}
+
+#IksOksGame .field:hover{
+  background: rgba(255, 0, 0, 0.4);
+}
+
+#IksOksGame .field{
+  border:1px solid #ffffff;
+}
+
+.field.x0,
+.field.x1,
+.field.x2
+{
+  border-left: 1px solid transparent !important;
+}
+
+.field.z0,
+.field.z1,
+.field.z2
+{
+  border-right: 1px solid transparent !important;
+}
+
+.field.x0,
+.field.y0,
+.field.z0 {
+  border-top: 1px solid transparent !important;
+}
+
+
+.field.x2,
+.field.y2,
+.field.z2 {
+  border-bottom: 1px solid transparent !important;
+}
