@@ -54,7 +54,7 @@ $(document).ready(function () {
             fields[currentField] = currentPlayer;
 
             //write text into field
-            $(this).text(currentPlayer);
+            $(this).addClass(currentPlayer.toLowerCase());
 
         } else {
             alert("This field is already filled!");
@@ -88,9 +88,15 @@ $(document).ready(function () {
                 isGameLive = false;
                 betterPlayer = currentPlayer;
 
+                $("." + field1.toString()).addClass("win");
+                $("." + field2.toString()).addClass("win");
+                $("." + field3.toString()).addClass("win");
+
+
                 //current player is winner
                 console.log("Imamo pobjednika");
-                alert(betterPlayer + " is WINNER!");
+                // alert(betterPlayer + " is WINNER!");
+                console.log(betterPlayer + " is WINNER!");
                 console.log("Winner combination is : " + combinations[i]);
             }
         }

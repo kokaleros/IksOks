@@ -421,24 +421,30 @@ there.
 #IksOksContainer {
   position: relative;
   display: block;
-  border:1px solid rgba(255, 0, 0,0.2);
-  width: 430px;
-  height: 430px;
+  /*border:1px solid rgba(255, 0, 0,0.2);*/
+  width: 600px;
+  height: 600px;
+
+  margin: 0 auto;
 }
 
 #IksOksGame {
   position: relative;
+  width: 498px;
+  height: 498px;
+  border: 8px solid #000;
+
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
 }
 
 #IksOksGame .field{
-  width: 30.8%;
-  height: 125px;
-  background: rgb(255, 0, 0);
+  width: 150px;
+  height: 150px;
+  /*background: rgb(255, 0, 0);*/
   float: left;
-  padding: 1% 1%;
-
-  color: #ffffff;
-  text-align: center;
+  padding:0;
 
   -webkit-transition:all 0.2s ease-In-Out;
   -moz-transition:all 0.2s ease-In-Out;
@@ -449,37 +455,47 @@ there.
   cursor:pointer;
 }
 
+#IksOksGame .field.win{
+  background: rgba(255, 0, 0, 0.6);
+}
+
 #IksOksGame .field:hover{
   background: rgba(255, 0, 0, 0.4);
 }
 
 #IksOksGame .field{
-  border:1px solid #ffffff;
+  border:8px solid #000000;
 }
 
-.field.x0,
-.field.x1,
-.field.x2
-{
-  border-left: 1px solid transparent !important;
+.x,.o{
+  position: relative;
 }
 
-.field.z0,
-.field.z1,
-.field.z2
-{
-  border-right: 1px solid transparent !important;
+.x:before{
+  content: "";
+  display: block;
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  background: url("../images/x-back.png") no-repeat center;
+  background-size:cover;
+  z-index: 1;
 }
 
-.field.x0,
-.field.y0,
-.field.z0 {
-  border-top: 1px solid transparent !important;
+.o:before{
+  content: "";
+  display: block;
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  background: url("../images/o-mark.png") no-repeat center;
+  background-size:cover;
 }
 
-
-.field.x2,
-.field.y2,
-.field.z2 {
-  border-bottom: 1px solid transparent !important;
+.currentPlayer {
+  display: none;
 }
